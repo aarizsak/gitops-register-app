@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "JENKINS-AGENT" }
+    agent { label "jenkins-agent" }
     environment {
               APP_NAME = "register-app-pipeline"
     }
@@ -13,7 +13,7 @@ pipeline {
 
         stage("Checkout from SCM") {
                steps {
-                   git branch: 'main', credentialsId: 'github-pass', url: 'https://github.com/AARIZSAK/gitops-register-app'
+                   git branch: 'main', credentialsId: 'github-pass', url: 'https://github.com/aarizsak/gitops-register-app'
                }
         }
 
